@@ -1,4 +1,12 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
 body {
+  background: -webkit-gradient(linear, left top, right top, color-stop(12%, #170219), to(#6b144f));
+  background: -webkit-linear-gradient(left, #170219 12%, #6b144f 100%);
+  background: linear-gradient(to right, #170219 12%, #6b144f 100%);
   margin: 0; }
 
 .divchik {
@@ -7,6 +15,10 @@ body {
   /*LOGO + NAVIGATION*/ }
 
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
   max-height: 150px;
   display: -webkit-flex;
   display: -moz-flex;
@@ -27,7 +39,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
   background: #456789 url("../img/logo-bg.jpg") no-repeat 0% 44%;
-  background-size: 100%; }
+  background-size: 110%; }
 
 header > nav > ul {
   display: -webkit-flex;
@@ -63,15 +75,103 @@ header > nav > ul > li > a {
   text-decoration: none;
   text-transform: uppercase;
   line-height: 4em;
-  color: #3A656C;
-  font-size: 80%;
+  color: #f2badc;
+  font: 140% Gabriola;
   font-weight: bolder; }
 
 header > nav > ul > li > a:hover {
-  color: white; }
+  color: #f7e1ee;
+  text-decoration: underline; }
 
 .logo {
   position: relative; }
 
 .logo > img {
-  width: 60%; }
+  width: 60%;
+  display: block;
+  margin-left: 5%; }
+
+.order {
+  display: block;
+  margin-top: 2%; }
+
+.forest {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  background: #333 url("../img/WinterForest.jpg") no-repeat center 0;
+  background-size: cover; }
+
+.orderBlock {
+  position: relative;
+  display: block;
+  border: 10px solid #6D155C;
+  width: 40%;
+  height: 40%;
+  -webkit-border-radius: 18px;
+          border-radius: 18px;
+  float: right;
+  margin-right: 6%;
+  margin-top: 6%; }
+
+.orderBlockInner {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(109, 21, 92, 0.4);
+  -webkit-border-radius: 8px;
+          border-radius: 8px;
+  -webkit-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .orderBlockInner a {
+    color: #ffadee;
+    text-transform: uppercase;
+    background-color: #6d1550;
+    position: relative;
+    padding: 15px 20px;
+    text-decoration: none;
+    text-align: center;
+    font: 48px Gabriola;
+    font-weight: bold;
+    text-shadow: 1px 2px 2px #4f1143;
+    /* Внешняя тень кнопки */
+    -webkit-box-shadow: 0px 9px 0px #4f1143, 0px 9px 25px rgba(0, 0, 0, 0.7);
+            box-shadow: 0px 9px 0px #4f1143, 0px 9px 25px rgba(0, 0, 0, 0.7);
+    -webkit-border-radius: 8px;
+            border-radius: 8px;
+    border: none;
+    outline: 0 none;
+    overflow: hidden; }
+  .orderBlockInner a:hover {
+    background-color: #68114b; }
+  .orderBlockInner a:active {
+    -webkit-box-shadow: 0px 3px 0px #4f1143, 0px 3px 6px rgba(0, 0, 0, 0.9);
+            box-shadow: 0px 3px 0px #4f1143, 0px 3px 6px rgba(0, 0, 0, 0.9);
+    top: 6px; }
+
+#gallery, #prices, #contacts {
+  border: 2px solid red;
+  width: 100%;
+  height: 90vh; }
+
+#gallery {
+  background: url(../img/fon-gallery.jpg) no-repeat center 65%;
+  background-size: cover; }
+
+@font-face {
+  font-family: Gabriola;
+  src: local("Gabriola"), url("../fonts/Gabriola.ttf"); }

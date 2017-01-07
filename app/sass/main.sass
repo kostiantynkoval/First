@@ -1,4 +1,7 @@
+*
+	box-sizing: border-box
 body
+	background: linear-gradient(to right, rgba(23,2,25,1) 12%,rgba(107,20,79,1) 100%)
 	margin: 0
 .divchik
 	color: #050
@@ -7,6 +10,10 @@ body
 				/*LOGO + NAVIGATION*/
 
 header
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 10
 	max-height: 150px
 	display: -webkit-flex
 	display: -moz-flex
@@ -17,7 +24,7 @@ header
 	justify-content: space-between
 	align-items: center
 	background: #456789 url('../img/logo-bg.jpg') no-repeat 0% 44%
-	background-size: 100%
+	background-size: 110%
 header>nav>ul
 	display: -webkit-flex
 	display: -moz-flex
@@ -43,15 +50,101 @@ header>nav>ul>li>a
 	text-decoration: none
 	text-transform: uppercase
 	line-height: 4em
-	color: #3A656C
-	font-size: 80%
+	color: #f2badc
+	font: 140% Gabriola
+	//font-size: 100%
 	font-weight: bolder
 
 header>nav>ul>li>a:hover
-	color: white
+	color: #f7e1ee
+	text-decoration: underline
 
 .logo
 	position: relative
 
 .logo>img
 	width: 60%
+	display: block
+	margin-left: 5%
+
+
+			//Section ORDER
+
+.order
+	display: block
+	margin-top: 2%
+
+.forest
+	display: block
+	position: relative
+	width: 100%
+	height: 90vh
+	//margin-left: 5%
+	background: #333 url('../img/WinterForest.jpg') no-repeat center 0
+	background-size: cover
+
+.orderBlock
+	position: relative
+	display: block
+	border: 10px solid #6D155C
+	width: 40%
+	height: 40%
+	border-radius: 18px
+	float: right
+	margin-right: 6%
+	margin-top: 6%
+
+.orderBlockInner
+	position: relative
+	display: flex
+	width: 100%
+	height: 100%
+	background-color: rgba(109, 21, 92, 0.4)
+	border-radius: 8px
+	flex-flow: row nowrap
+	justify-content: center
+	align-items: center
+
+	a
+		color: #ffadee
+		text-transform: uppercase
+		background-color: rgb(109, 21, 80)
+		position: relative
+		padding: 15px 20px
+		text-decoration: none
+		text-align: center
+		font: 48px Gabriola
+		font-weight: bold
+		text-shadow: 1px 2px 2px rgb(79, 17, 67)
+		/* Внешняя тень кнопки */
+		box-shadow: 0px 9px 0px rgb(79, 17, 67), 0px 9px 25px rgba(0, 0, 0, 0.7);
+		//background-color: #458ecc
+		border-radius: 8px
+		border: none
+		outline: 0 none
+		overflow: hidden
+
+	a:hover
+		background-color: rgb(104, 17, 75)
+
+	a:active
+		box-shadow: 0px 3px 0px rgb(79, 17, 67), 0px 3px 6px rgba(0, 0, 0, 0.9)
+		top: 6px
+
+
+		//Section: GALLERY
+
+#gallery, #prices, #contacts
+	border: 2px solid red
+	width: 100%
+	height: 90vh
+
+#gallery
+	background: url(../img/fon-gallery.jpg) no-repeat center 65%
+	background-size: cover
+
+
+			//FONTS
+@font-face
+	font-family: Gabriola
+	src: local("Gabriola"), url('../fonts/Gabriola.ttf')
