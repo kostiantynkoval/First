@@ -3,14 +3,11 @@
 body
 	background: linear-gradient(to right, rgba(23,2,25,1) 12%,rgba(107,20,79,1) 100%)
 	margin: 0
-.divchik
-	color: #050
-	margin-top: 100px
 
 				/*LOGO + NAVIGATION*/
 
 header
-	position: fixed
+	position: relative
 	top: 0
 	left: 0
 	z-index: 10
@@ -70,36 +67,44 @@ header>nav>ul>li>a:hover
 
 			//Section ORDER
 
-.order
-	display: block
-	margin-top: 2%
-
-.forest
+#order
 	display: block
 	position: relative
 	width: 100%
-	height: 90vh
+	margin-top: 1%
+
+.nailFrench
+	display: block
+	position: relative
+	width: 100%
+	height: 200vh
 	//margin-left: 5%
-	background: #333 url('../img/WinterForest.jpg') no-repeat center 0
-	background-size: cover
+	background: #333
+	overflow: hidden
+
+	img
+		display: block
+		position: absolute
+		bottom: 0
+		width: 100%
 
 .orderBlock
 	position: relative
 	display: block
-	border: 10px solid #6D155C
-	width: 40%
-	height: 40%
-	border-radius: 18px
-	float: right
-	margin-right: 6%
-	margin-top: 6%
+	//border: 10px solid #6D155C
+	width: 30%
+	height: 20%
+	//border-radius: 18px
+	float: left
+	//margin-right: 6%
+	margin-top: 15%
 
 .orderBlockInner
 	position: relative
 	display: flex
 	width: 100%
 	height: 100%
-	background-color: rgba(109, 21, 92, 0.4)
+	//background-color: rgba(109, 21, 92, 0.4)
 	border-radius: 8px
 	flex-flow: row nowrap
 	justify-content: center
@@ -134,14 +139,129 @@ header>nav>ul>li>a:hover
 
 		//Section: GALLERY
 
-#gallery, #prices, #contacts
+#contacts
+	margin-top: 1%
 	border: 2px solid red
 	width: 100%
-	height: 90vh
+	height: 200vh
 
 #gallery
-	background: url(../img/fon-gallery.jpg) no-repeat center 65%
-	background-size: cover
+	margin-top: 1%
+	width: 100%
+	height: 150vh
+	display: flex
+	flex-flow: row nowrap
+	justify-content: center
+	align-items: center
+	position: relative
+	background: #333
+	overflow: hidden
+
+	.bg-gallery
+		display: block
+		position: absolute
+		bottom: 0
+		width: 100%
+
+
+.container
+	max-width: 900px
+	display: flex
+	flex-flow: row wrap
+	justify-content: space-between
+	align-items: center
+	align-content: space-around
+	z-index: 50
+
+	a img
+		display: block
+		border: 3px solid #ffe
+		border-radius: 3px
+		margin: 5px
+
+
+			//Section PRICES
+
+#prices
+	margin-top: 1%
+	width: 100%
+	height: 200vh
+	display: flex
+	flex-flow: row nowrap
+	justify-content: center
+	align-items: center
+	position: relative
+	background: #333
+	overflow: hidden
+
+	img
+		display: block
+		position: absolute
+		bottom: 0
+		width: 100%
+
+table
+	z-index: 50
+	font: 40px Gabriola
+	border-spacing: 3vw
+	background-color: rgba(0,0,0,0.2)
+	border-radius: 10px
+
+
+			//Section CONTACTS
+
+#contacts
+	margin-top: 1%
+	display: flex
+	flex-flow: column nowrap
+	justify-content: center
+	align-content: center
+
+.contactsHeader
+	display: flex
+	flex-flow: row nowrap
+	justify-content: center
+	align-items: stretch
+	z-index: 50
+
+.adress-bar
+	width: 30%
+	display: flex
+	flex-flow: column nowrap
+	justify-content: center
+	align-content: center
+	font: 26px Gabriola
+	color: #ffd
+
+	p
+		margin: 0
+		padding: 0
+
+.messageForm
+	width: 30%
+	display: flex
+	flex-flow: column nowrap
+	justify-content: center
+	align-content: center
+form
+	display: flex
+	flex-flow: column nowrap
+	justify-content: center
+	align-content: center
+
+	*
+		margin-bottom: 1vw
+		border-radius: 3px
+	input
+		height: 1.8em
+
+
+
+iframe
+	width: 60%
+	margin-left: 20%
+
+
 
 
 			//FONTS
