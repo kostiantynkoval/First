@@ -4,6 +4,22 @@ body
 	background: linear-gradient(to right, rgba(23,2,25,1) 12%,rgba(107,20,79,1) 100%)
 	margin: 0
 
+.sectionBlock
+	max-width: 80%
+	position: relative
+	margin: 0 auto
+	margin-top: 0.5%
+	overflow: hidden
+	border: 2px ridge #fba
+	height: 200vh
+	> img
+		display: block
+		position: absolute
+		bottom: 0
+		width: 100%
+		z-index: 0
+
+
 				/*LOGO + NAVIGATION*/
 
 header
@@ -11,7 +27,7 @@ header
 	top: 0
 	left: 0
 	z-index: 10
-	max-height: 150px
+	height: 25vh
 	display: -webkit-flex
 	display: -moz-flex
 	display: -ms-flex
@@ -60,7 +76,7 @@ header>nav>ul>li>a:hover
 	position: relative
 
 .logo>img
-	width: 60%
+	width: 80vh
 	display: block
 	margin-left: 5%
 
@@ -70,23 +86,6 @@ header>nav>ul>li>a:hover
 #order
 	display: block
 	position: relative
-	width: 100%
-	margin-top: 1%
-
-.nailFrench
-	display: block
-	position: relative
-	width: 100%
-	height: 200vh
-	//margin-left: 5%
-	background: #333
-	overflow: hidden
-
-	img
-		display: block
-		position: absolute
-		bottom: 0
-		width: 100%
 
 .orderBlock
 	position: relative
@@ -140,22 +139,14 @@ header>nav>ul>li>a:hover
 		//Section: GALLERY
 
 #contacts
-	margin-top: 1%
 	border: 2px solid red
-	width: 100%
-	height: 200vh
 
 #gallery
-	margin-top: 1%
-	width: 100%
-	height: 150vh
 	display: flex
 	flex-flow: row nowrap
 	justify-content: center
 	align-items: center
 	position: relative
-	background: #333
-	overflow: hidden
 
 	.bg-gallery
 		display: block
@@ -183,8 +174,6 @@ header>nav>ul>li>a:hover
 			//Section PRICES
 
 #prices
-	margin-top: 1%
-	width: 100%
 	height: 200vh
 	display: flex
 	flex-flow: row nowrap
@@ -192,26 +181,22 @@ header>nav>ul>li>a:hover
 	align-items: center
 	position: relative
 	background: #333
-	overflow: hidden
 
-	img
-		display: block
-		position: absolute
-		bottom: 0
-		width: 100%
 
 table
 	z-index: 50
-	font: 40px Gabriola
-	border-spacing: 3vw
+	font: 30px Gabriola
+	border-spacing: 2vw
 	background-color: rgba(0,0,0,0.2)
 	border-radius: 10px
+
+	th, td
+		text-shadow: 1px 1px #FFF
 
 
 			//Section CONTACTS
 
 #contacts
-	margin-top: 1%
 	display: flex
 	flex-flow: column nowrap
 	justify-content: center
@@ -225,7 +210,7 @@ table
 	z-index: 50
 
 .adress-bar
-	width: 30%
+	width: 40%
 	display: flex
 	flex-flow: column nowrap
 	justify-content: center
@@ -233,12 +218,13 @@ table
 	font: 26px Gabriola
 	color: #ffd
 
-	p
+	span
 		margin: 0
 		padding: 0
+		line-height: 1.5em
 
 .messageForm
-	width: 30%
+	width: 40%
 	display: flex
 	flex-flow: column nowrap
 	justify-content: center
@@ -249,22 +235,42 @@ form
 	justify-content: center
 	align-content: center
 
+	input[type="submit"]
+		width: 50%
+
 	*
 		margin-bottom: 1vw
 		border-radius: 3px
 	input
 		height: 1.8em
 
-
+.contactsMap
+	position: relative
+	height: 50%
+	margin-top: 5vh
+	width: 80%
+	margin-left: 10%
 
 iframe
-	width: 60%
-	margin-left: 20%
+	position: absolute
+	height: 100%
+	width: 100%
 
-
+.upButton
+	position: fixed
+	width: 5vw
+	height: 5vw
+	background-color: #fff
+	right: 3vw
+	bottom: 3vw
+	display: none
 
 
 			//FONTS
 @font-face
 	font-family: Gabriola
 	src: local("Gabriola"), url('../fonts/Gabriola.ttf')
+
+
+
+
