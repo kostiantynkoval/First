@@ -15,9 +15,9 @@
 		<nav>
 			<ul>
 				<li><a href="#order">Записаться</a></li>
-				<li><a href="#gallery">Галерея</a></li>
-				<li><a href="#prices">Прайс-лист</a></li>
-				<li><a href="#contacts">Контакты</a></li>
+				<li><a href="#galleryBlock">Галерея</a></li>
+				<li><a href="#pricesTable">Прайс-лист</a></li>
+				<li><a href="#contactsBlock">Контакты</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -25,13 +25,38 @@
 		<img src="img/french.jpg">
 		<div class="orderBlock">
 			<div class="orderBlockInner">
-				<a id="orderVisit" href="#">Записаться</a>
+				<a id="orderVisit" href="#fancyForm">Записаться</a>
 			</div>
 		</div>
+		<!-- Форма для записи (fancybox) -->
+		<div id="fancyForm" style="display:none">
+			<form id="visit_form" method="post" action="">
+	    	<p id="visit_error">Поля не могут быть пустыми</p>
+				<p>
+					<label for="visit_name">Имя: </label><br>
+					<input type="text" id="visit_name" name="visit_name" size="30" placeholder="Ваше имя" />
+				</p>
+				<p>
+					<label for="visit_phone">Телефон: </label><br>
+					<input type="text" id="visit_phone" name="visit_phone" size="30" placeholder="Номер Вашего телефона" />
+				</p>
+				<p>
+					<label for="visit_text">Сообщение: </label><br>
+					<textarea type="text" id="visit_text" name="visit_text" cols="30" rows="4" placeholder="Укажите, пожалуйста, желаемую дату и время визита"></textarea>
+				</p>
+				<p>
+					<input type="submit" value="Отправить" />
+				</p>
+				<p>
+				    <em>Leave empty so see resizing</em>
+				</p>
+			</form>
+		</div>
+		<!-- Конец формы -->
 	</section>
 	<section class="sectionBlock" id="gallery">
 		<img class="bg-gallery" src="img/fon-gallery.jpg">
-		<div class="container">
+		<div id="galleryBlock" class="container">
 			<a href="Big/1.jpg" class="fancybox" rel="group">
 				<img src="Small/1.jpg">
 			</a>
@@ -96,7 +121,7 @@
 	</section>
 	<section class="sectionBlock" id="prices">
 		<img src="img/fon-prices.jpg">
-		<table>
+		<table id="pricesTable">
 			<thead>
 				<tr>
 					<th>№ пп</th>
@@ -140,7 +165,7 @@
 	</section>
 	<section class="sectionBlock" id="contacts">
 	<img src="img/fon-contacts.jpg">
-		<div class="contactsHeader">
+		<div id="contactsBlock" class="contactsHeader">
 			<section class="adress-bar">
 				<span><strong>Наш Адрес</strong></span>
 				<span>Запорожская обл.</span>
@@ -161,6 +186,7 @@
 			</section>
 		</div>
 		<section class="contactsMap">
+			<div class="overlay" onClick="style.pointerEvents='none'"></div>
 			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2683.7857642390345!2d35.20233136652181!3d47.72740698959644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDfCsDQzJzM4LjciTiAzNcKwMTInMTQuMCJF!5e0!3m2!1sru!2sua!4v1483915312738" frameborder="0" style="border:0" allowfullscreen></iframe>
 		</section>
 		
